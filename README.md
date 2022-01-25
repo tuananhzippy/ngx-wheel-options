@@ -75,6 +75,7 @@ Once your library is imported, you can use its main component, ngx-wheel in your
 - `spinDuration` is the number of seconds the wheel wil be spinning for
 - `spinAmount` is the number of spins the wheel will make before stopping
 - `innerRadius` is the inner radius of the wheel. Allows you to make the wheel hollow from the center
+- `pointerEnable` is the on off pointer
 - `pointerStrokeColor` is the color of the pointer's stroke
 - `pointerFillColor` is the color of the pointer's fill
 - `textAlignment` and `textOrientation` both have the types `TextAlignment` and `TextOrientation`, respectively. Check the [Full Reference](http://dougtesting.net/winwheel/docs/tut6_text_alignment) for visual examples.
@@ -102,6 +103,7 @@ A couple of common use cases that were frequently requested was the ability to s
   [items]='items'
   [innerRadius]='50'
   [spinAmount]='10'
+  [pointerEnable]="true"
   pointerStrokeColor='red'
   pointerFillColor='purple'
   [idToLandOn]='idToLandOn'
