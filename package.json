@@ -1,0 +1,13 @@
+{
+  "name": "ngx-wheel-options",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/tuananhzippy/ngx-wheel-options"
+  },
+  "homepage": "https://ngx-wheel.web.app/",
+  "peerDependencies": {
+    "@angular/common": "^9.1.7",
+    "@angular/core": "^9.1.7",
+    "tslib": "^1.10.0"
+  }
+}
