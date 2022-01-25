@@ -38,6 +38,7 @@ export class NgxWheelComponent implements OnInit, AfterViewInit {
   @Input() spinDuration: number;
   @Input() spinAmount: number;
   @Input() innerRadius: number;
+  @Input() pointerEnable: boolean = true;
   @Input() pointerStrokeColor: string;
   @Input() pointerFillColor: string;
   @Input() disableSpinOnClick: boolean;
@@ -105,7 +106,9 @@ export class NgxWheelComponent implements OnInit, AfterViewInit {
     TweenMax.ticker.removeEventListener("tick")
   }
 
-  drawPointer(){
+  drawPointer() {
+    if (!this.pointerEnable) return;
+    
     let c = this.wheel.ctx;
     // Create pointer.
     if (c) {
