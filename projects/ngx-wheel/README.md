@@ -50,6 +50,7 @@ Once your library is imported, you can use its main component, ngx-wheel in your
 <ngx-wheel
   width='600'
   height='600'
+  lineWidth='8'
   spinDuration='8'
   [disableSpinOnClick]='true'
   [items]='items'
@@ -72,6 +73,7 @@ Once your library is imported, you can use its main component, ngx-wheel in your
 #### Inputs
 - `height` is the height of the wheel canvas
 - `width` is the width of the wheel canvas
+- `lineWidth` is the colour, gradient, or pattern for the lines around the segments or the lines around text of the wheel canvas
 - `spinDuration` is the number of seconds the wheel wil be spinning for
 - `spinAmount` is the number of spins the wheel will make before stopping
 - `innerRadius` is the inner radius of the wheel. Allows you to make the wheel hollow from the center
@@ -97,6 +99,7 @@ A couple of common use cases that were frequently requested was the ability to s
   #wheel
   width='600'
   height='600'
+  lineWidth='8'
   spinDuration='8'
   [disableSpinOnClick]='true'
   [items]='items'

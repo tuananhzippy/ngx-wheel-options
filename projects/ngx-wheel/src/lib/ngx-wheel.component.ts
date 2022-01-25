@@ -30,8 +30,8 @@ export class NgxWheelComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  @Input() lineWidth: number;
   @Input() height: number;
+  @Input() lineWidth: number;
   @Input() idToLandOn: any;
   @Input() width: number;
   @Input() items: Item[];
@@ -81,9 +81,9 @@ export class NgxWheelComponent implements OnInit, AfterViewInit {
     const segments = this.items
     // @ts-ignore
     this.wheel = new Winwheel({
-      lineWidth: this.lineWidth,
       numSegments: segments.length,
       segments,
+      lineWidth: this.lineWidth,
       innerRadius: this.innerRadius || 0,
       outerRadius: (this.height / 2) - 20,
       centerY: (this.height / 2) + 20,
