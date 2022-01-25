@@ -15,7 +15,7 @@ ngx-wheel is an open-source Angular library which creates a dynamic prize-winnin
 To install this library, run:
 
 ```bash
-$ npm install ngx-wheel --save
+$ npm install ngx-wheel-options --save
 ```
 
 Then inside your `index.html` file located in the `src` directory add these 2 lines to the `<head>` tag:
@@ -29,7 +29,7 @@ Then inside your `index.html` file located in the `src` directory add these 2 li
 
 Import the module
 ```typescript
-import { NgxWheelModule } from 'ngx-wheel'; //<-- import here
+import { NgxWheelModule } from 'ngx-wheel-options'; //<-- import here
 
 @NgModule({
   declarations: [
@@ -113,7 +113,7 @@ A couple of common use cases that were frequently requested was the ability to s
 - In your parent component ts file, refer to the wheel using `ViewChild`
 ```typescript
 import { ..., ViewChild, ... } from '@angular/core';
-import { NgxWheelComponent } from 'ngx-wheel';
+import { NgxWheelComponent } from 'ngx-wheel-options';
 
 // ...
 
@@ -145,4 +145,4 @@ One thing to keep in mind when using the spin function this way. If you want to 
 
 ## License
 
-MIT © [Ahmed El Sayegh](mailto:ahmedelsayegh7@gmail.com)
+MIT © [Tuan Anh Zippy](mailto:kieutuananh1995@gmail.com)
