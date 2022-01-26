@@ -29,7 +29,7 @@ Then inside your `index.html` file located in the `src` directory add these 2 li
 
 Import the module
 ```typescript
-import { NgxWheelModule } from 'ngx-wheel'; //<-- import here
+import { NgxWheelModule } from 'ngx-wheel-options'; //<-- import here
 
 @NgModule({
   declarations: [

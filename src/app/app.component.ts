@@ -15,7 +15,6 @@ export class AppComponent {
   textAlignment: TextAlignment = TextAlignment.OUTER
 
   ngOnInit(){
-    this.idToLandOn = this.seed[Math.floor(Math.random() * this.seed.length)];
     const colors = ['#FF0000', '#000000']
     this.items = this.seed.map((value) => ({
       fillStyle: colors[value % 2],
@@ -26,15 +25,17 @@ export class AppComponent {
       strokeStyle: 'white'
     }))
   }
+
   reset() {
     this.wheel.reset()
   }
+
   before() {
     alert('Your wheel is about to spin')
   }
 
-  async spin(prize) {
-    this.idToLandOn = prize
+  async spin(prize: number = -1) {
+    this.idToLandOn = (prize > -1) ? prize : this.seed[Math.floor(Math.random() * this.seed.length)];
     await new Promise(resolve => setTimeout(resolve, 0));
     this.wheel.spin()
   }

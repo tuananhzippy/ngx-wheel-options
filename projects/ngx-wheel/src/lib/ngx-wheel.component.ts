@@ -19,10 +19,10 @@ export enum TextOrientation {
 @Component({
   selector: 'ngx-wheel',
   template: `
-    <canvas (click)='!disableSpinOnClick && spin()' id='canvas' [width]='width' [height]='height'>
+    <canvas id="canvas" [width]="width" [height]="height">
         Canvas not supported, use another browser.
     </canvas>
-`,
+  `,
   styles: [
   ]
 })
