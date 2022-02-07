@@ -16,6 +16,9 @@ export enum TextOrientation {
   CURVED = 'curved',
 }
 
+declare const Winwheel;
+declare const TweenMax;
+
 @Component({
   selector: 'ngx-wheel',
   template: `
@@ -79,6 +82,10 @@ export class NgxWheelComponent implements OnInit, AfterViewInit {
     }, this.spinDuration * 1000)
   }
   ngAfterViewInit() {
+    if (typeof Winwheel !== "function" || typeof TweenMax !== "function") {
+      return;
+    }
+
     const segments = this.items
     // @ts-ignore
     this.wheel = new Winwheel({
@@ -102,6 +109,9 @@ export class NgxWheelComponent implements OnInit, AfterViewInit {
   }
 
   ngOnDestroy() {
+    if (typeof Winwheel !== "function" || typeof TweenMax !== "function") {
+      return;
+    }
     // @ts-ignore
     TweenMax.ticker.removeEventListener("tick")
   }
